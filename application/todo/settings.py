@@ -85,13 +85,18 @@ DATABASES = {
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {"NAME": f"django.contrib.auth.password_validation.{name}"}
-    for name in [
-        "UserAttributeSimilarityValidator",
-        "MinimumLengthValidator",
-        "CommonPasswordValidator",
-        "NumericPasswordValidator"
-    ]
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',  # noqa: E501
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',  # noqa: E501
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',  # noqa: E501
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',  # noqa: E501
+    },
 ]
 
 
